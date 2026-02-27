@@ -1,0 +1,224 @@
+:root {
+    --primary: #00d4ff;
+    --bg-dark: #0a0a0a;
+    --bg-card: #141414;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --accent: #00ff88;
+    --github-color: #24292e;
+    --transition-slow: all 0.7s cubic-bezier(0.5, 0, 0, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.navbar {
+    height: 70px;
+    background: rgba(10, 10, 10, 0.95);
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+.navbar nav {
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-size: 1.5rem; font-weight: 800; }
+.logo span { color: var(--primary); }
+
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a { text-decoration: none; color: var(--text-primary); font-size: 0.9rem; transition: 0.3s; }
+.nav-links a:hover { color: var(--primary); }
+
+.hero, .skills, .certifications, .projects { 
+    padding: 80px 5%; 
+    max-width: 1100px; 
+    margin: 0 auto; 
+}
+
+h2 { 
+    font-size: 2rem; 
+    margin-bottom: 40px; 
+    border-left: 5px solid var(--primary); 
+    padding-left: 15px; 
+}
+
+.hero-content { display: flex; align-items: center; gap: 60px; }
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 24px;
+    border: 2px solid var(--primary);
+    object-fit: cover;
+}
+
+.hero-text h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 10px; }
+.subtitle { color: var(--primary); font-weight: 600; font-size: 1.1rem; margin-bottom: 20px; text-transform: uppercase; }
+.description { color: var(--text-secondary); margin-bottom: 30px; max-width: 600px; }
+
+.cta-buttons { display: flex; gap: 15px; }
+
+.btn-secondary, .btn-github {
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-secondary { border: 1px solid #333; color: #fff; }
+.btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
+
+.btn-github { background: var(--github-color); color: #fff; border: 1px solid #444; }
+.btn-github:hover { background: #333; }
+
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+.skill-category h3 { color: var(--primary); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; }
+.skill-category ul { list-style: none; }
+.skill-category li { color: var(--text-secondary); padding: 8px 0; border-bottom: 1px solid #1a1a1a; }
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px; 
+}
+
+.cert-card {
+    background: var(--bg-card);
+    padding: 20px; 
+    border-radius: 12px;
+    border: 1px solid #1f1f1f;
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    transition: 0.3s ease;
+}
+
+.cert-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.cert-img-container {
+    flex-shrink: 0;
+    width: 140px; 
+    height: 100px; 
+    overflow: hidden;
+    border-radius: 8px; 
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.cert-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    transition: transform 0.3s ease;
+}
+
+.cert-info h3 { font-size: 1.1rem; color: var(--text-primary); margin-bottom: 4px; }
+.cert-info p { font-size: 0.9rem; color: var(--text-secondary); }
+
+.projects-container { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 25px; 
+}
+
+.project-card { 
+    background: var(--bg-card); 
+    padding: 25px; 
+    border-radius: 12px; 
+    border: 1px solid #1f1f1f; 
+    transition: 0.3s; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover { 
+    transform: translateY(-5px); 
+    border-color: var(--primary); 
+}
+
+.project-info h3 { color: var(--primary); margin-bottom: 10px; }
+.project-info p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 15px; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.tag { 
+    background: #1f1f1f; 
+    color: var(--accent); 
+    padding: 4px 10px; 
+    border-radius: 20px; 
+    font-size: 0.75rem; 
+    font-weight: bold; 
+}
+
+.btn-github-link {
+    align-self: flex-start;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 1px solid var(--primary);
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-github-link:hover {
+    background: var(--primary);
+    color: #000;
+}
+
+.section-hidden {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: var(--transition-slow);
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+footer { 
+    text-align: center; 
+    padding: 60px; 
+    color: #444; 
+    border-top: 1px solid #111; 
+}
+
+@media (max-width: 768px) {
+    .hero-content { flex-direction: column; text-align: center; }
+    .hero-text h1 { font-size: 2.5rem; }
+    .nav-links { display: none; }
+    .cert-card { flex-direction: column; text-align: center; }
+}
