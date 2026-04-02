@@ -1,0 +1,201 @@
+:root {
+    --neon-green: #00ff88;
+    --bg-dark: #050505;
+    --panel-bg: #0a0a0a;
+    --border-color: #1a1a1a;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.nav-bar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    border-bottom: 1px solid var(--border-color);
+    background-color: rgba(5, 5, 5, 0.9);
+}
+.nav-logo { text-decoration: none; color: #fff; font-weight: 800; font-size: 1.5rem; }
+.nav-logo span { color: var(--neon-green); }
+
+.project-detail-container {
+    padding: 50px 8% 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.back-link {
+    color: var(--neon-green);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2rem;
+    transition: 0.3s ease;
+}
+.back-link:hover { opacity: 0.7; transform: translateX(-5px); }
+
+.project-header { margin-bottom: 40px; }
+.project-header h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: 0 0 10px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+#p-year {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.carousel-section {
+    width: 100%;
+    margin-bottom: 60px;
+    padding: 40px 0;
+    background: radial-gradient(circle at center, #111 0%, transparent 60%);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 40px;
+}
+
+.swiper-slide {
+    width: 70%;
+    max-width: 900px;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: #000;
+    opacity: 0.4;
+    transition: opacity 0.3s;
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.swiper-pagination-bullet { background: #555; opacity: 1; }
+.swiper-pagination-bullet-active { background: var(--neon-green); box-shadow: 0 0 10px var(--neon-green); }
+
+.project-info-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Caixa de Texto */
+.text-panel {
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.text-panel::after {
+    content: "";
+    position: absolute;
+    top: -1px; right: -1px;
+    width: 15px; height: 15px;
+    border-top: 2px solid var(--neon-green);
+    border-right: 2px solid var(--neon-green);
+    border-top-right-radius: 8px;
+}
+
+.text-panel h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--neon-green);
+    letter-spacing: 3px;
+    margin: 0 0 20px 0;
+}
+
+#p-long-desc {
+    line-height: 1.8;
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin: 0;
+    text-align: justify;
+}
+
+.action-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-tech {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+
+.btn-live {
+    background-color: transparent;
+    border: 1px solid #333;
+}
+.btn-live:hover { background-color: #111; border-color: #555; }
+
+.btn-repo {
+    background-color: transparent;
+    border: 1px solid var(--neon-green);
+    color: var(--neon-green);
+}
+.btn-repo:hover {
+    background-color: var(--neon-green);
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 900px) {
+    .project-info-grid { grid-template-columns: 1fr; }
+    .swiper-slide { width: 85%; }
+    .carousel-section { padding: 20px 0; }
+}
+
+@media (max-width: 600px) {
+    .project-detail-container { padding: 30px 5% 60px; }
+    .project-header h1 { font-size: 2rem; }
+    .text-panel { padding: 25px; }
+    .swiper-slide { width: 95%; }
+}

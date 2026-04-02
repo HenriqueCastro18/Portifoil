@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/projeto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>Detalhes do Projeto // Henrique Castro</title>
+</head>
+
+<body>
+    <header class="nav-bar">
+        <a href="index.html" class="nav-logo">HC<span>.</span></a>
+    </header>
+
+    <main class="project-detail-container">
+        <a href="index.html" class="back-link">
+            ← Voltar para Galeria
+        </a>
+
+        <div class="project-header">
+            <h1 id="p-title">Carregando...</h1>
+            <span id="p-year"></span>
+        </div>
+
+        <section class="carousel-section">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper" id="p-gallery">
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="project-info-grid">
+            <div class="text-panel">
+                <h3>[ Detalhes_do_Nucleo ]</h3>
+                <p id="p-long-desc"></p>
+            </div>
+            
+            <div class="action-panel">
+                <a href="#" id="p-live" target="_blank" class="btn-tech btn-live">Execute Project.Live ↗</a>
+                <a href="#" id="p-repo" target="_blank" class="btn-tech btn-repo">Access Repository.Source ↗</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script/projeto.js"></script>
+</body>
+
+</html>

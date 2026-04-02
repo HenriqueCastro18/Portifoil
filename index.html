@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700;800&display=swap"
+        rel="stylesheet">
+    <title>Portifoil Software Engineer</title>
+</head>
+
+<body>
+    <header class="nav-bar">
+        <nav>
+            <a href="#" class="nav-logo">HC<span>.</span></a>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#sobre">Início</a></li>
+                <li><a href="#skills">Stack</a></li>
+                <li><a href="#certificados">certificates</a></li>
+                <li><a href="#projetos">Projects</a></li>
+            </ul>
+            <button class="menu-toggle" id="mobile-btn" aria-label="Abrir Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre" class="hero">
+            <div class="hero-container">
+                <div class="hero-headline">
+                    <span class="eyebrow">SYSTEM_STATUS: STABLE // ENGENHARIA DE SOFTWARE // 7º SEMESTRE</span>
+                    <h1>Architecting robust <br>systems with <span class="text-stroke">precision.</span></h1>
+                </div>
+
+                <div class="hero-content">
+                    <div class="hero-3d-viewport">
+                        <div class="scanner-line"></div>
+                        <canvas id="hero-3d-canvas"></canvas>
+                        <div class="viewport-ui">
+                            <span class="ui-tag">CORE_LOAD: 42%</span>
+                            <span class="ui-tag">INTERACT_MODE: ON</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-bio">
+                        <div class="bio-header">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <span>hc_dev_log.sh</span>
+                        </div>
+                        <div class="bio-body">
+                            <p><span class="prompt">></span> Henrique Castro. Graduando em Engenharia de Software (7º semestre) focado em <b>Arquitetura Back-End</b> e <b>Sistemas Escaláveis</b>. Desenvolvedor versátil com expertise em Python (Django), C# (.NET) e ecossistema Front-End (React, Three.js), com sólida experiência em integração de IA Generativa.</p>
+                            <br>
+                            <p><span class="prompt">></span> Movido pela resolução de problemas complexos e pela engenharia de software de alto nível. Minha experiência abrange desde arquiteturas de segurança defensiva até plataformas web integradas com serviços em nuvem e IoT. Aplico rigorosamente os princípios SOLID, Design Patterns e Clean Architecture para entregar soluções eficientes, manuteníveis e alinhadas às necessidades reais do negócio.</p>
+                        </div>
+
+                        <div class="hero-footer">
+                            <div class="avatar-wrapper">
+                                <img src="./image/social.jpg" alt="Henrique Castro" class="main-avatar">
+                                <div class="avatar-glow"></div>
+                            </div>
+                            <div class="hero-social-links">
+                                <a href="https://www.linkedin.com/in/henrique-castro-b13798345" target="_blank" class="btn-link">LinkedIn ↗</a>
+                                <a href="https://github.com/HenriqueCastro18" target="_blank" class="btn-link">GitHub ↗</a>
+                                <a href="./Curriculo Henrique.pdf" download class="btn-link btn-cv">DOWNLOAD_CURRÍCULO 📥</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="section-title">
+                <h2>Technical_Stack<span>.</span></h2>
+            </div>
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h3>[ Front-End_&_UI ]</h3>
+                    <div class="skills-grid">
+                        <div class="skill-tag">HTML5 & CSS3</div>
+                        <div class="skill-tag">JavaScript (ES6+)</div>
+                        <div class="skill-tag">React</div>
+                        <div class="skill-tag">Three.js (3D)</div>
+                        <div class="skill-tag">Design Responsivo</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>[ Back-End ]</h3>
+                    <div class="skills-grid">
+                        <div class="skill-tag">Python (Django)</div>
+                        <div class="skill-tag">C# (.NET)</div>
+                        <div class="skill-tag">Java (Fundamentos)</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>[ Database ]</h3>
+                    <div class="skills-grid">
+                        <div class="skill-tag">SQL Server</div>
+                        <div class="skill-tag">PostgreSQL</div>
+                        <div class="skill-tag">Firebase Firestore</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>[ Engineering_&_Tools ]</h3>
+                    <div class="skills-grid">
+                        <div class="skill-tag">SOLID & Clean Arch</div>
+                        <div class="skill-tag">Design Patterns</div>
+                        <div class="skill-tag">Defensive Auth (MFA)</div>
+                        <div class="skill-tag">Integração IA (Gemini/Groq)</div>
+                        <div class="skill-tag">Sistemas IoT</div>
+                        <div class="skill-tag">Excel Avançado</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificados" class="expertise">
+            <div class="section-title">
+                <h2>certificates<span>.</span></h2>
+            </div>
+            <div class="cert-gallery">
+                <article class="cert-box">
+                    <img src="./image/Curso Arquitetura de Software.jpg" alt="Arquitetura de Software">
+                    <div class="cert-info">
+                        <h3>Arquitetura de Software</h3>
+                        <p>Design Patterns & SOLID</p>
+                    </div>
+                </article>
+
+                <article class="cert-box">
+                    <img src="./image/Curso HTML5 com CSS3.jpg" alt="HTML5 e CSS3">
+                    <div class="cert-info">
+                        <h3>HTML5 & CSS3</h3>
+                        <p>Cursa Academy</p>
+                    </div>
+                </article>
+
+                <article class="cert-box">
+                    <img src="./image/Curso Java Básico.jpg" alt="Java Básico">
+                    <div class="cert-info">
+                        <h3>Java Básico</h3>
+                        <p>Fundamentos de POO</p>
+                    </div>
+                </article>
+
+                <article class="cert-box">
+                    <img src="./image/Curso Segredos de Excel.jpg" alt="Segredos de Excel">
+                    <div class="cert-info">
+                        <h3>Segredos de Excel</h3>
+                        <p>Cursa Academy</p>
+                    </div>
+                </article>
+
+                <article class="cert-box">
+                    <img src="./image/Curso Tabela  Dinâmica no Excel.jpg" alt="Tabela Dinâmica no Excel">
+                    <div class="cert-info">
+                        <h3>Tabela Dinâmica no Excel</h3>
+                        <p>Cursa Academy</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="projetos" class="projects">
+            <div class="section-title">
+                <h2>Deployed_Projects<span>.</span></h2>
+            </div>
+            <div class="project-list">
+                <div class="project-item" onclick="openProject('dieta')">
+                    <div class="p-left">
+                        <span class="p-year">2026</span>
+                        <h3>Dieta Fácil V3</h3>
+                    </div>
+                    <p class="p-desc">Ecossistema de saúde com Gemini AI, Firebase e gamificação RPG.</p>
+                    <span class="p-arrow">Access Source ↗</span>
+                </div>
+
+                <div class="project-item" onclick="openProject('biblioteca')">
+                    <div class="p-left">
+                        <span class="p-year">2026</span>
+                        <h3>Biblioteca v4.0</h3>
+                    </div>
+                    <p class="p-desc">Sistema de gestão de acervos em C# aplicando Repository Pattern e SQL Server.</p>
+                    <span class="p-arrow">Access Source ↗</span>
+                </div>
+
+                <div class="project-item" onclick="openProject('mario')">
+                    <div class="p-left">
+                        <span class="p-year">2025</span>
+                        <h3>Mario Jumper</h3>
+                    </div>
+                    <p class="p-desc">Desenvolvimento de jogos com foco em lógica pura, física e precisão de colisão.</p>
+                    <span class="p-arrow">Access Source ↗</span>
+                </div>
+
+                <div class="project-item" onclick="openProject('gastos')">
+                    <div class="p-left">
+                        <span class="p-year">2025</span>
+                        <h3>Gestor de Gastos</h3>
+                    </div>
+                    <p class="p-desc">Aplicação Full-Stack voltada para organização financeira pessoal e análise de dados.</p>
+                    <span class="p-arrow">Access Source ↗</span>
+                </div>
+
+                <div class="project-item" onclick="openProject('medicenter')">
+                    <div class="p-left">
+                        <span class="p-year">2024</span>
+                        <h3>MediCenter</h3>
+                    </div>
+                    <p class="p-desc">Landing page moderna e responsiva focada no setor de saúde e clínicas médicas.</p>
+                    <span class="p-arrow">Access Source ↗</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-wrap">
+            <p>© 2026 Henrique Castro // Mogi das Cruzes, SP</p>
+            <div class="footer-status"><span></span> SERVER_ONLINE</div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
