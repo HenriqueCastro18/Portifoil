@@ -4,9 +4,9 @@ const projectData = {
         year: '2026',
         longDesc: 'Ecossistema completo de saúde que integra IA Generativa de baixa latência (Gemini 2.0 e Groq) para análise nutricional e geração de treinos personalizados. O sistema utiliza uma arquitetura multicamadas com persistência em nuvem via Firebase Firestore e segurança defensiva robusta, incluindo Multi-Factor Authentication (MFA). O grande diferencial técnico é o sistema de gamificação em RPG, que utiliza lógica de XP, Streaks (combos de consistência) e spritesheets animados para recompensar o progresso do usuário com pets exclusivos.',
         images: [
-            './Image/Dieta_IA/home.png',
-            './Image/Dieta_IA/rankingFunc.png',
-            './Image/Dieta_IA/gameficaçao.png'
+            './image/Dieta_IA/home.png',
+            './image/Dieta_IA/rankingFunc.png',
+            './image/Dieta_IA/Gameficaçao.png'
         ],
         live: 'https://dieta-ia-v3.vercel.app/', 
         repo: 'https://github.com/HenriqueCastro18/Dieta-Facil'
