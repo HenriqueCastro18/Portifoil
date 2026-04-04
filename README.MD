@@ -23,6 +23,10 @@
 ## 👤 Perfil e Habilidades
 
 <div align="center">
+  <img src="./image/sobre.png" alt="Overview de Tecnologias" width="100%">
+</div>
+
+<div align="center">
   <img src="./image/Projetos.png" alt="Overview de Tecnologias" width="100%">
 </div>
 
