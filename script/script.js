@@ -63,7 +63,7 @@ const init3DScene = () => {
         model.position.sub(center);
 
         model.scale.set(1.4, 1.4, 1.4);
-        model.position.y = -8.8;
+        model.position.y = -8.8; 
 
         scene.add(model);
 
@@ -126,7 +126,7 @@ const initMobileMenu = () => {
 };
 
 window.openProject = (id) => {
-    window.location.href = `projeto.html?id=${id}`;
+    window.location.href = `${id}.html`;
 };
 
 document.addEventListener('DOMContentLoaded', () => {

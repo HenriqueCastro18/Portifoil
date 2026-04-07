@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCenter // UI & HealthTech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./style/medicenter.css">
+</head>
+<body>
+
+    <header class="header-main">
+        <div class="header-container">
+            <a href="index.html" class="logo">Medi<span>Center</span></a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#servicos">Especialidades</a>
+                <a href="#arquitetura">Arquitetura</a>
+                <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Hub</a>
+            </nav>
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <span class="badge"><i class="fas fa-heartbeat"></i> UI/UX HealthTech</span>
+                <h1>Cuidando de você com <span>tecnologia e precisão.</span></h1>
+                <p>Interface front-end de alta performance projetada para clínicas. Foco absoluto em semântica, acessibilidade e arquitetura CSS escalável (Mobile First).</p>
+                
+                <div class="project-actions">
+                    <a href="https://henriquecastro18.github.io/MediCenter/" target="_blank" class="btn-action btn-live">
+                        <i class="fas fa-play"></i> Execute Live_Project ↗
+                    </a>
+                    <a href="https://github.com/HenriqueCastro18/MediCenter" target="_blank" class="btn-action btn-github">
+                        <i class="fab fa-github"></i> Access Repository ↗
+                    </a>
+                </div>
+
+                <div class="hero-tech-stack">
+                    <span class="tech-tag"><i class="fab fa-html5" style="color: #E34F26;"></i> HTML5 Semântico</span>
+                    <span class="tech-tag"><i class="fab fa-css3-alt" style="color: #1572B6;"></i> CSS3 Flexbox</span>
+                    <span class="tech-tag"><i class="fab fa-js" style="color: #F7DF1E;"></i> Vanilla JS</span>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="abstract-medical-box">
+                    <i class="fas fa-hand-holding-medical"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section" id="servicos">
+            <div class="section-title">
+                <h2>Layout Dinâmico (Flexbox)</h2>
+                <p>Estrutura adaptável que flui perfeitamente de 320px até resoluções 4K.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="s-icon"><i class="fas fa-stethoscope"></i></div>
+                    <h3>Clínico Geral</h3>
+                    <p>Atendimento preventivo e acompanhamento integral estruturado em cards expansíveis.</p>
+                </div>
+                <div class="service-card">
+                    <div class="s-icon"><i class="fas fa-tooth"></i></div>
+                    <h3>Odontologia</h3>
+                    <p>Uso inteligente de pseudo-elementos para decoração sem poluir o DOM.</p>
+                </div>
+                <div class="service-card">
+                    <div class="s-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Oftalmologia</h3>
+                    <p>Hierarquia de fontes e contraste testados para máxima acessibilidade (A11y).</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-details" id="arquitetura">
+            <div class="tech-info">
+                <div class="tech-header">
+                    <span class="dot" style="background:#ff5f56;"></span>
+                    <span class="dot" style="background:#ffbd2e;"></span>
+                    <span class="dot" style="background:#27c93f;"></span>
+                    <span class="title">sys_architecture.md</span>
+                </div>
+                <div class="tech-body">
+                    <h3>[ Arquitetura_Front-End ]</h3>
+                    <p><span class="prompt">></span> Este projeto vai além de uma simples página. Foca na manipulação pura do DOM e em estratégias estritas de <strong>Mobile First</strong>.</p>
+                    <p><span class="prompt">></span> A responsividade não é uma adaptação posterior; é a base da construção. A interface utiliza unidades fluidas (como <code>clamp</code>, <code>rem</code> e <code>flex-basis</code>) para garantir a integridade do design sem depender de frameworks pesados como o Bootstrap.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="system-status">
+            <span class="pulse"></span> UI_ENVIRONMENT: <span style="color: #0ea5e9; font-weight: bold;">STABLE</span> // ACCESSIBILITY: 100/100
+        </div>
+    </main>
+
+    <script src="./script/medicenter.js"></script>
+</body>
+</html>

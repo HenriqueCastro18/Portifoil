@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smarko // Defensive Architecture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./style/smarko.css">
+</head>
+
+<body>
+    <div class="cyber-grid"></div>
+
+    <div class="container">
+        <header class="hero">
+            <div class="hero-badge">TFC // Security by Design</div>
+            <h1 class="glitch-title" data-value="Smarko Defensive Architecture">Smarko <span class="outline-text">Defensive</span><br>Architecture</h1>
+            <p>Um ecossistema de gestão comercial blindado. Desenvolvido com padrões rigorosos de Cibersegurança, criptografia militar e defesa ativa contra intrusões.</p>
+        </header>
+
+        <div class="tech-stack">
+            <div class="tech-item"><i class="fab fa-python"></i> Python / Django</div>
+            <div class="tech-item"><i class="fas fa-fire"></i> Google Firestore</div>
+            <div class="tech-item"><i class="fas fa-key"></i> BCrypt 14</div>
+        </div>
+
+        <section class="interactive-terminal">
+            <div class="terminal-header">
+                <div class="mac-btns"><span></span><span></span><span></span></div>
+                <div class="terminal-title">smarko_defense_core.exe</div>
+            </div>
+            <div class="terminal-body" id="terminal-output">
+                <p><span class="prompt">></span> Sistema Smarko iniciado. Aguardando eventos de segurança...</p>
+            </div>
+            <div class="terminal-controls">
+                <button onclick="runSimulation('bruteforce')"><i class="fas fa-skull"></i> Simular Força Bruta</button>
+                <button onclick="runSimulation('2fa')"><i class="fas fa-mobile-alt"></i> Testar 2FA</button>
+                <button onclick="runSimulation('sql')"><i class="fas fa-database"></i> Tentar SQL Injection</button>
+            </div>
+        </section>
+
+        <div class="features-grid">
+            
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3 class="cipher-hover" data-value="Proteção de Credenciais">Proteção de Credenciais</h3>
+                <p>Hashing irreversível de alta resistência computacional. Encarece exponencialmente ataques de força bruta, dicionário e rainbow tables.</p>
+                <div class="feature-tags">
+                    <span class="tag">BCrypt 14 Rounds</span>
+                    <span class="tag">Unique Salt</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3 class="cipher-hover" data-value="Autenticação Multifator">Autenticação Multifator</h3>
+                <p>O acesso não é garantido apenas por senha. Implementámos uma zona isolada que exige validação via código OTP dinâmico enviado por e-mail.</p>
+                <div class="feature-tags">
+                    <span class="tag">OTP Criptográfico</span>
+                    <span class="tag">Expiração: 2 min</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-ban"></i></div>
+                <h3 class="cipher-hover" data-value="Mitigação de Ameaças">Mitigação de Ameaças</h3>
+                <p>Sistema inteligente de defesa ativa que deteta padrões de ataque em tempo real. Bloqueia IPs instantaneamente após sucessivas falhas.</p>
+                <div class="feature-tags">
+                    <span class="tag">Rate Limiting</span>
+                    <span class="tag">Lockout Automático</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-database"></i></div>
+                <h3 class="cipher-hover" data-value="Criptografia Total">Criptografia Total</h3>
+                <p>A custódia de dados delega no Google Cloud, garantindo proteção ponta a ponta. Impedimos interceções na rede e vazamento de dados físicos.</p>
+                <div class="feature-tags">
+                    <span class="tag">TLS 1.3 / HSTS</span>
+                    <span class="tag">AES-256 (Firestore)</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="project-actions">
+            <a href="https://smarkoo.vercel.app/login/" target="_blank" class="btn-action btn-live">
+                <i class="fas fa-play"></i> Execute Live_Project ↗
+            </a>
+            <a href="https://github.com/HenriqueCastro18/Smarko-TFC" target="_blank" class="btn-action btn-github">
+                <i class="fab fa-github"></i> Access Repository.Source ↗
+            </a>
+        </div>
+
+        <div class="system-status">
+            <span class="pulse"></span> ALL SECURITY PROTOCOLS ONLINE // ENGINE RUNNING
+        </div>
+    </div>
+
+    <script src="./script/smarko.js"></script>
+</body>
+</html>

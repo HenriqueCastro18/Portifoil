@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dieta Fácil V3 // HealthTech & Gamification</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./style/dieta.css">
+</head>
+
+<body>
+    <div class="energy-background"></div>
+
+    <div class="container">
+        <header class="hero">
+            <div class="hero-badge"><i class="fas fa-leaf"></i> HealthTech Ecosystem</div>
+            <h1 class="hero-title">Dieta Fácil <span class="accent-orange">V3</span></h1>
+            <p>Muito mais que um contador de calorias. Um ecossistema completo movido a Inteligência Artificial Generativa (Gemini & Groq IA) com um motor de gamificação RPG para transformar a consistência num hábito viciante.</p>
+        </header>
+
+        <div class="tech-stack">
+            <div class="tech-item"><i class="fab fa-react" style="color: #61DAFB;"></i> React + TS</div>
+            <div class="tech-item"><i class="fas fa-brain" style="color: #8E75B2;"></i> Gemini 2.0 / Groq IA</div>
+            <div class="tech-item"><i class="fas fa-fire" style="color: #FFA000;"></i> Firebase Auth/DB</div>
+        </div>
+
+        <section class="rpg-simulator">
+            <div class="sim-header">
+                <h3><i class="fas fa-gamepad"></i> Motor de Gamificação (RPG Simulator)</h3>
+                <span class="sim-badge">Demonstração Interativa</span>
+            </div>
+            
+            <div class="rpg-dashboard">
+                <div class="user-profile">
+                    <div class="avatar-ring">
+                        <img src="./image/social.jpg" alt="User Avatar" class="avatar-img" onerror="this.src='https://ui-avatars.com/api/?name=HC&background=ff6b00&color=fff'">
+                    </div>
+                    <div class="user-info">
+                        <h4 id="user-title">Iniciante Core</h4>
+                        <p>Nível <span id="val-level" class="accent-orange font-bold">1</span></p>
+                    </div>
+                </div>
+
+                <div class="stats-panel">
+                    <div class="stat-box">
+                        <i class="fas fa-fire-alt stat-icon orange"></i>
+                        <div class="stat-data">
+                            <span class="stat-label">Streak (Dias Seguidos)</span>
+                            <span class="stat-value"><span id="val-streak">0</span> 🔥</span>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fas fa-paw stat-icon green"></i>
+                        <div class="stat-data">
+                            <span class="stat-label">Pet Atual</span>
+                            <span class="stat-value" id="val-pet">Nenhum</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="xp-container">
+                <div class="xp-labels">
+                    <span>Progresso de XP</span>
+                    <span id="val-xp-text">0 / 2000 XP</span>
+                </div>
+                <div class="xp-bar-bg">
+                    <div class="xp-bar-fill" id="xp-bar"></div>
+                </div>
+            </div>
+
+            <div class="sim-controls">
+                <p class="formula-text">Fórmula: 500 XP (Base) + 300 XP por Streak (Cap 1500)</p>
+                <button id="btn-workout" class="btn-action-sim"><i class="fas fa-dumbbell"></i> Concluir Treino de Hoje</button>
+            </div>
+        </section>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon orange-bg"><i class="fas fa-brain"></i></div>
+                <h3>Cloud IA & Groq Inference</h3>
+                <p>Geração de treinos e análise nutricional utilizando Google Gemini 2.0 Flash e Groq IA. Otimização extrema de resposta (-60% de latência) com dados estruturados via JSON Mode nativo.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon green-bg"><i class="fas fa-database"></i></div>
+                <h3>Arquitetura de 4 Camadas</h3>
+                <p>Fluxo de dados inteligente para alta disponibilidade: Cache Estático -> Cache Global (Firebase) -> Processamento Cloud IA -> Auto-Learning Comunitário.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon orange-bg"><i class="fas fa-ghost"></i></div>
+                <h3>Sistema de Spritesheets</h3>
+                <p>Recompensas visuais imersivas. O utilizador desbloqueia Pets animados (Pato, Gato, Corvo) através do React Responsive Spritesheet à medida que ganha níveis.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon green-bg"><i class="fas fa-shield-alt"></i></div>
+                <h3>Segurança Multicamadas</h3>
+                <p>Transição de um MVP para nível de Produção. Implementação de Multi-Factor Authentication (MFA), Firebase Auth e validação estrita de credenciais via RegEx.</p>
+            </div>
+        </div>
+
+        <div class="project-actions">
+            <a href="https://dieta-ia-v3.vercel.app/" target="_blank" class="btn-action btn-live">
+                <i class="fas fa-play"></i> Execute Live_Project ↗
+            </a>
+            <a href="https://github.com/HenriqueCastro18/Dieta-Facil" target="_blank" class="btn-action btn-github">
+                <i class="fab fa-github"></i> Access Repository.Source ↗
+            </a>
+        </div>
+
+        <div class="system-status">
+            ECOSYSTEM_STATUS: <span class="status-live">● LIVE</span> // CLOUD_SYNC: ACTIVE
+        </div>
+    </div>
+
+    <script src="./script/dieta.js"></script>
+</body>
+</html>

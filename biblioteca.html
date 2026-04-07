@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca v4.0 // Design Patterns</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./style/biblioteca.css">
+</head>
+
+<body>
+    <div class="db-grid"></div>
+
+    <div class="container">
+        <header class="hero">
+            <div class="hero-badge">C# .NET // Clean Architecture</div>
+            <h1 class="db-title">Library Management <span class="accent-gold">v4.0</span></h1>
+            <p>Um sistema de gestão desenvolvido em C# focado em integridade de dados e Padrões de Projeto (Design Patterns). Controle de acervos robusto utilizando MySQL e integração via API.</p>
+        </header>
+
+        <div class="tech-stack">
+            <div class="tech-item"><i class="fab fa-microsoft"></i> C# .NET</div>
+            <div class="tech-item"><i class="fas fa-database"></i> MySQL</div>
+            <div class="tech-item"><i class="fas fa-project-diagram"></i> Design Patterns</div>
+        </div>
+
+        <section class="db-simulator">
+            <div class="sim-header">
+                <span class="status-dot"></span>
+                <span>COMMAND_PATTERN_ENGINE_V4</span>
+            </div>
+            
+            <div class="sim-viewport">
+                <div class="db-table-area">
+                    <div class="table-header">
+                        <span>ID</span><span>LIVRO</span><span>STATUS</span>
+                    </div>
+                    <div id="db-records" class="db-records">
+                        </div>
+                </div>
+                <div class="db-log" id="db-log">
+                    <p class="sys-text">> Conexão MySQL estabelecida.</p>
+                    <p class="sys-text">> Aguardando comandos...</p>
+                </div>
+            </div>
+
+            <div class="sim-controls">
+                <div class="stats">
+                    <p>Registros: <span id="val-records">0</span></p>
+                    <p>Undo Stack: <span id="val-stack">0</span></p>
+                </div>
+                <div class="action-btns">
+                    <button id="btn-add"><i class="fas fa-plus"></i> ADD_BOOK</button>
+                    <button id="btn-undo" class="btn-warning" disabled><i class="fas fa-undo"></i> UNDO</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                <h3>Command & Undo</h3>
+                <p>Implementação do Command Pattern para desacoplar a interface da lógica de negócio. Cada ação de inserção armazena um estado reversível (Undo) para recuperação do banco de dados.</p>
+                <div class="feature-tags">
+                    <span class="tag">Design Pattern</span>
+                    <span class="tag">State Recovery</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-search-plus"></i></div>
+                <h3>Google Books API</h3>
+                <p>Módulo de consulta automatizada que utiliza a API do Google para preenchimento de metadados. Tratamento de dados JSON utilizando a biblioteca Newtonsoft.Json.</p>
+                <div class="feature-tags">
+                    <span class="tag">REST API</span>
+                    <span class="tag">JSON Parsing</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                <h3>Integridade Referencial</h3>
+                <p>O sistema impede empréstimos múltiplos simultâneos e monitoriza atrasos em tempo real, travando novas ações caso o aluno possua pendências de devolução.</p>
+                <div class="feature-tags">
+                    <span class="tag">Business Logic</span>
+                    <span class="tag">Foreign Keys</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-actions">
+            <a href="https://github.com/HenriqueCastro18/Biblioteca-v4.0" target="_blank" class="btn-action btn-github">
+                <i class="fab fa-github"></i> Access Repository.Source ↗
+            </a>
+        </div>
+
+        <div class="system-status">
+            <span class="pulse"></span> DATABASE_STATUS: ONLINE // SINGLETON: INSTANCED
+        </div>
+    </div>
+
+    <script src="./script/biblioteca.js"></script>
+</body>
+
+</html>

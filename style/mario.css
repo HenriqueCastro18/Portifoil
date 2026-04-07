@@ -1,0 +1,322 @@
+:root {
+    --bg-dark: #050505;
+    --mario-red: #e52521;
+    --mario-gold: #fbd000;
+    --neon-green: #00ff88;
+    --surface: #0a0a0f;
+    --border: rgba(229, 37, 33, 0.2);
+    --text-muted: #a0a0a0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.pixel-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--mario-red) 0.5px, transparent 0.5px);
+    background-size: 30px 30px;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero-badge {
+    font-family: 'Space Mono', monospace;
+    color: var(--mario-gold);
+    background: rgba(251, 208, 0, 0.1);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(251, 208, 0, 0.2);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.accent-text {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--mario-red);
+    filter: drop-shadow(0 0 15px var(--mario-red));
+}
+
+.tech-stack {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.tech-item {
+    font-family: 'Space Mono', monospace;
+    background: var(--surface);
+    padding: 10px 20px;
+    border: 1px solid var(--border);
+    font-size: 0.85rem;
+}
+
+.tech-item i {
+    color: var(--mario-red);
+    margin-right: 8px;
+}
+
+.physics-simulator {
+    background: #000;
+    border: 1px solid #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.sim-header {
+    background: #111;
+    padding: 10px 20px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--neon-green);
+    border-radius: 50%;
+}
+
+.game-viewport {
+    height: 300px;
+    position: relative;
+    border-bottom: 1px solid #1a1a1a;
+    background: linear-gradient(to bottom, #050505, #0a0a0f);
+    overflow: hidden;
+}
+
+.mario-box {
+    width: 50px;
+    height: 50px;
+    background: var(--mario-red);
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgba(229, 37, 33, 0.4);
+    transition: bottom 0.1s ease-out;
+}
+
+.obstacle-box {
+    width: 40px;
+    height: 40px;
+    background: var(--mario-gold);
+    position: absolute;
+    bottom: 20px;
+    right: -50px;
+    border-radius: 4px;
+}
+
+.sim-controls {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #080808;
+}
+
+.stats {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.stats span {
+    color: #fff;
+}
+
+.text-green {
+    color: var(--neon-green) !important;
+}
+
+.text-red {
+    color: var(--mario-red) !important;
+    font-weight: bold;
+}
+
+#jump-trigger {
+    background: transparent;
+    border: 1px solid var(--mario-red);
+    color: var(--mario-red);
+    padding: 12px 25px;
+    font-family: 'Space Mono', monospace;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#jump-trigger:hover {
+    background: var(--mario-red);
+    color: #fff;
+    box-shadow: 0 0 20px var(--mario-red);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: var(--surface);
+    padding: 40px 30px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    color: var(--mario-red);
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.feature-tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--mario-gold);
+    border: 1px solid rgba(251, 208, 0, 0.3);
+    padding: 4px 8px;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.btn-github {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--text-muted);
+}
+
+.btn-github:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+.btn-live {
+    background: transparent;
+    color: var(--mario-red);
+    border: 1px solid var(--mario-red);
+}
+
+.btn-live:hover {
+    background: var(--mario-red);
+    color: #fff;
+    box-shadow: 0 0 20px rgba(229, 37, 33, 0.4);
+    transform: translateY(-3px);
+}
+
+.system-status {
+    margin-top: 60px;
+    text-align: center;
+    border-top: 1px solid #1a1a1a;
+    padding-top: 30px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    color: #444;
+}
+
+.pulse {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--mario-red);
+    border-radius: 50%;
+    margin-right: 10px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .btn-action {
+        width: 100%;
+        justify-content: center;
+    }
+}
