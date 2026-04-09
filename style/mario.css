@@ -21,6 +21,31 @@ body {
     overflow-x: hidden;
 }
 
+.btn-back-floating {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.btn-back-floating:hover {
+    background: var(--mario-red);
+    color: #fff;
+    box-shadow: 0 0 15px var(--mario-red);
+    transform: scale(1.1);
+}
+
 .pixel-grid {
     position: fixed;
     top: 0;
@@ -41,7 +66,7 @@ body {
 
 .hero {
     text-align: center;
-    margin-bottom: 50px;
+    margin: 40px 0 50px;
 }
 
 .hero-badge {
@@ -303,18 +328,24 @@ body {
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(3);
-        opacity: 0;
-    }
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .btn-back-floating {
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+    }
+
+    .physics-simulator {
+        margin-bottom: 30px;
+    }
+
     .btn-action {
         width: 100%;
         justify-content: center;

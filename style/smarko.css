@@ -23,6 +23,31 @@ body {
     overflow-x: hidden;
 }
 
+.btn-back-floating {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.btn-back-floating:hover {
+    background: var(--neon-green);
+    color: #000;
+    box-shadow: 0 0 15px var(--neon-green);
+    transform: scale(1.1);
+}
+
 .cyber-grid {
     position: fixed;
     top: 0;
@@ -39,24 +64,19 @@ body {
 }
 
 @keyframes gridMove {
-    0% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: 0 50px;
-    }
+    0% { background-position: 0 0; }
+    100% { background-position: 0 50px; }
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 80px 20px;
+    padding: 60px 20px;
 }
 
 .hero {
     text-align: center;
-    margin-bottom: 60px;
+    margin: 40px 0 60px;
 }
 
 .hero-badge {
@@ -148,17 +168,9 @@ body {
     background: #333;
 }
 
-.mac-btns span:nth-child(1) {
-    background: #ff5f56;
-}
-
-.mac-btns span:nth-child(2) {
-    background: #ffbd2e;
-}
-
-.mac-btns span:nth-child(3) {
-    background: #27c93f;
-}
+.mac-btns span:nth-child(1) { background: #ff5f56; }
+.mac-btns span:nth-child(2) { background: #ffbd2e; }
+.mac-btns span:nth-child(3) { background: #27c93f; }
 
 .terminal-title {
     font-family: 'Space Mono', monospace;
@@ -176,28 +188,6 @@ body {
     min-height: 200px;
     max-height: 300px;
     overflow-y: auto;
-}
-
-.terminal-body p {
-    margin-bottom: 8px;
-}
-
-.prompt {
-    color: var(--neon-green);
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-.text-red {
-    color: var(--neon-red);
-}
-
-.text-green {
-    color: var(--neon-green);
-}
-
-.text-blue {
-    color: var(--neon-blue);
 }
 
 .terminal-controls {
@@ -244,42 +234,6 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
-    transform: translateX(-100%);
-    transition: transform 0.6s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(0, 255, 136, 0.5);
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
-}
-
-.feature-card:hover::before {
-    transform: translateX(100%);
-}
-
-.feature-icon {
-    width: 50px;
-    height: 50px;
-    background: rgba(0, 255, 136, 0.1);
-    border: 1px solid rgba(0, 255, 136, 0.2);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: var(--neon-green);
-    margin-bottom: 20px;
-}
-
 .feature-card h3 {
     font-size: 1.3rem;
     margin-bottom: 15px;
@@ -291,22 +245,6 @@ body {
     color: var(--text-muted);
     font-size: 0.95rem;
     margin-bottom: 20px;
-}
-
-.feature-tags {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.tag {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--neon-blue);
-    background: rgba(0, 229, 255, 0.05);
-    padding: 4px 8px;
-    border: 1px solid rgba(0, 229, 255, 0.2);
-    border-radius: 4px;
 }
 
 .project-actions {
@@ -330,7 +268,6 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     transition: 0.3s ease;
-    letter-spacing: 1px;
 }
 
 .btn-github {
@@ -342,9 +279,7 @@ body {
 .btn-github:hover {
     background: #fff;
     color: #000;
-    border-color: #fff;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-    transform: translateY(-3px);
 }
 
 .btn-live {
@@ -357,17 +292,16 @@ body {
     background: var(--neon-green);
     color: #000;
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
-    transform: translateY(-3px);
 }
 
 .system-status {
     margin-top: 80px;
     text-align: center;
-    padding-top: 40px;
+    padding: 40px 0;
     border-top: 1px solid var(--border);
     font-family: 'Space Mono', monospace;
     font-size: 0.8rem;
-    color: var(--text-muted);
+    color: #444;
 }
 
 .pulse {
@@ -377,31 +311,28 @@ body {
     background: var(--neon-green);
     border-radius: 50%;
     margin-right: 10px;
-    box-shadow: 0 0 10px var(--neon-green);
     animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7);
-    }
-
-    70% {
-        box-shadow: 0 0 0 10px rgba(0, 255, 136, 0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(0, 255, 136, 0);
-    }
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
 }
 
 @media (max-width: 768px) {
+    .btn-back-floating {
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+    }
+
     .terminal-controls {
         flex-direction: column;
     }
-}
 
-@media (max-width: 600px) {
     .btn-action {
         width: 100%;
         justify-content: center;

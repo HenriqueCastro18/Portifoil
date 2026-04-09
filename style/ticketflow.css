@@ -1,0 +1,194 @@
+:root {
+    --bg-dark: #050505;
+    --neon-blue: #00d1ff;
+    --neon-blue-glow: rgba(0, 209, 255, 0.4);
+    --surface: #0a0c10;
+    --border: rgba(0, 209, 255, 0.2);
+    --text-muted: #808a9d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.btn-back-floating {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.btn-back-floating:hover {
+    background: var(--neon-blue);
+    color: #000;
+    box-shadow: 0 0 15px var(--neon-blue);
+    transform: scale(1.1);
+}
+
+.matrix-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(var(--border) 1px, transparent 1px), 
+                      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+
+.hero { text-align: center; margin: 40px 0 50px; }
+.hero-badge {
+    font-family: 'Space Mono', monospace;
+    color: var(--neon-blue);
+    background: rgba(0, 209, 255, 0.1);
+    padding: 8px 15px; border-radius: 4px;
+    font-size: 0.75rem; border: 1px solid var(--border);
+    margin-bottom: 20px; display: inline-block;
+}
+
+.pixel-title { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; }
+.accent-text {
+    color: transparent; -webkit-text-stroke: 1px var(--neon-blue);
+    filter: drop-shadow(0 0 15px var(--neon-blue));
+}
+
+.tech-stack { display: flex; justify-content: center; gap: 15px; margin-bottom: 60px; flex-wrap: wrap; }
+.tech-item {
+    font-family: 'Space Mono', monospace;
+    background: var(--surface); padding: 10px 20px;
+    border: 1px solid var(--border); font-size: 0.8rem;
+}
+.tech-item i { color: var(--neon-blue); margin-right: 8px; }
+
+.concurrency-lab {
+    background: #000; border: 1px solid #1a1e26;
+    border-radius: 12px; overflow: hidden; margin-bottom: 60px;
+}
+.lab-header {
+    background: #11141b; padding: 12px 20px;
+    font-family: 'Space Mono', monospace; font-size: 0.7rem;
+    color: #555; display: flex; align-items: center; gap: 10px;
+}
+.status-dot { width: 8px; height: 8px; background: #00ff88; border-radius: 50%; box-shadow: 0 0 10px #00ff88; }
+
+.visualizer-viewport {
+    height: 350px; display: grid; grid-template-columns: 1fr 200px;
+    align-items: center; padding: 40px; gap: 40px;
+    background: radial-gradient(circle at center, #0a0c10 0%, #050505 100%);
+}
+
+.queue-track {
+    height: 100px; border: 2px dashed #1a1e26;
+    border-radius: 8px; display: flex; align-items: center;
+    padding: 0 20px; gap: 15px; overflow: hidden;
+}
+
+.request-packet {
+    width: 60px; height: 40px; background: var(--neon-blue);
+    border-radius: 4px; display: flex; align-items: center;
+    justify-content: center; font-family: 'Space Mono', monospace;
+    font-size: 0.7rem; color: #000; font-weight: bold;
+}
+
+.database-core {
+    width: 150px; height: 150px; border: 2px solid var(--neon-blue);
+    border-radius: 50%; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    box-shadow: 0 0 30px var(--neon-blue-glow);
+}
+.db-icon { font-size: 2.5rem; color: var(--neon-blue); margin-bottom: 10px; }
+#db-status { font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--neon-blue); }
+
+.lab-controls { padding: 30px; background: #08090b; border-top: 1px solid #1a1e26; text-align: center; }
+#simulate-btn {
+    background: transparent; border: 1px solid var(--neon-blue);
+    color: var(--neon-blue); padding: 15px 30px;
+    font-family: 'Space Mono', monospace; cursor: pointer;
+    transition: 0.3s; margin-bottom: 20px;
+}
+#simulate-btn:hover { background: var(--neon-blue); color: #000; box-shadow: 0 0 20px var(--neon-blue); }
+
+.terminal-logs {
+    background: #000; padding: 15px; border-radius: 4px;
+    font-family: 'Space Mono', monospace; font-size: 0.75rem;
+    color: #00ff88; text-align: left; height: 80px; overflow-y: auto;
+}
+
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.feature-card { background: var(--surface); padding: 40px; border: 1px solid var(--border); border-radius: 12px; }
+.feature-icon { font-size: 1.8rem; color: var(--neon-blue); margin-bottom: 20px; }
+.feature-card h3 { font-family: 'Space Mono', monospace; margin-bottom: 15px; color: #fff; }
+.feature-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
+
+.project-actions { display: flex; justify-content: center; gap: 20px; margin-top: 60px; flex-wrap: wrap; }
+.btn-action {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 15px 30px; border-radius: 6px; font-family: 'Space Mono', monospace;
+    font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+    text-decoration: none; transition: 0.3s ease;
+}
+.btn-github { background: #fff; color: #000; }
+
+.system-status {
+    margin-top: 60px; text-align: center; border-top: 1px solid #1a1a1a;
+    padding-top: 30px; font-family: 'Space Mono', monospace;
+    font-size: 0.75rem; color: #444;
+}
+
+.pulse {
+    display: inline-block; width: 6px; height: 6px;
+    background: var(--neon-blue); border-radius: 50%;
+    margin-right: 10px; animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .btn-back-floating {
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+    }
+
+    .visualizer-viewport {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 20px;
+    }
+
+    .database-core {
+        margin: 20px auto;
+    }
+
+    .btn-action {
+        width: 100%;
+        justify-content: center;
+    }
+}

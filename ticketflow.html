@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketFlow API // Database Engine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./style/ticketflow.css">
+</head>
+<body>
+    <a href="index.html" class="btn-back-floating" aria-label="Voltar">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <div class="matrix-bg"></div>
+
+    <div class="container">
+        <header class="hero">
+            <div class="hero-badge">Node.js // ACID Transactions // PostgreSQL</div>
+            <h1 class="pixel-title">TicketFlow <span class="accent-text">API</span></h1>
+            <p>Um motor de reservas robusto projetado para resolver o problema de <b>Race Conditions</b>. Utiliza transações interativas para garantir que nenhum ingresso seja vendido em duplicidade, mesmo sob carga massiva de requisições simultâneas.</p>
+        </header>
+
+        <div class="tech-stack">
+            <div class="tech-item"><i class="fas fa-server"></i> Node.js & TS</div>
+            <div class="tech-item"><i class="fas fa-database"></i> Prisma & Neon</div>
+            <div class="tech-item"><i class="fas fa-shield-alt"></i> Bcrypt & Zod</div>
+            <div class="tech-item"><i class="fas fa-book"></i> Swagger Docs</div>
+        </div>
+
+        <section class="concurrency-lab">
+            <div class="lab-header">
+                <span class="status-dot"></span>
+                <span>CONCURRENCY_STRESS_TEST_V1.1</span>
+            </div>
+            <div class="visualizer-viewport">
+                <div class="queue-container">
+                    <div class="request-label">Incoming Requests</div>
+                    <div id="request-queue" class="queue-track">
+                        </div>
+                </div>
+                <div class="database-core">
+                    <div class="db-icon"><i class="fas fa-database"></i></div>
+                    <div id="db-status">IDLE</div>
+                </div>
+            </div>
+            <div class="lab-controls">
+                <button id="simulate-btn">SIMULATE_CONCURRENT_TRAFFIC</button>
+                <div id="logs" class="terminal-logs">> Ready for simulation...</div>
+            </div>
+        </section>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-microchip"></i></div>
+                <h3>ACID Transactions</h3>
+                <p>Implementação de transações interativas via Prisma para isolar processos de escrita, garantindo a integridade do banco de dados durante operações críticas.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+                <h3>Defensive Security</h3>
+                <p>Criptografia de senhas com Bcrypt e sanitização de entrada com Zod, impedindo ataques de injeção e vazamento de credenciais em texto puro.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-code-branch"></i></div>
+                <h3>Clean Architecture</h3>
+                <p>Organização baseada em middlewares e tratamento centralizado de erros, seguindo os princípios de código manutenível e escalável.</p>
+            </div>
+        </div>
+
+        <div class="project-actions">
+            <a href="https://github.com/HenriqueCastro18/Ticket-Flow-API" target="_blank" class="btn-action btn-github">
+                <i class="fab fa-github"></i> Source Code.Repo ↗
+            </a>
+        </div>
+
+        <div class="system-status">
+            <span class="pulse"></span> ENGINE_STATUS: OPERATIONAL // GRADUANDO ENGENHARIA DE SOFTWARE - UMC
+        </div>
+    </div>
+
+    <script src="./script/ticketflow.js"></script>
+</body>
+</html>
